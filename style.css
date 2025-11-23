@@ -1,7 +1,51 @@
-body { font-family: Arial, sans-serif; background: #f7f7fa; margin: 0; }
-header { background: #FF4F72; color: white; text-align: center; padding: 50px 20px; }
-.section { max-width: 900px; margin: auto; padding: 40px 20px; }
-form, ul { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
-input, textarea { width: 100%; margin-top: 10px; padding: 12px; border-radius: 6px; border: 1px solid #ccc; }
-button { background: #FF4F72; color: white; padding: 12px 20px; border: none; border-radius: 6px; margin-top: 15px; cursor: pointer; }
-button:hover { opacity: 0.9; }
+/* KeepClose simple modern style with subtle animations */
+:root{
+  --pink:#FF4F72;
+  --bg:#f7f7fa;
+  --card:#ffffff;
+  --muted:#6b6b6b;
+}
+*{box-sizing:border-box}
+body{font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;background:var(--bg);margin:0;color:#222;line-height:1.4}
+a{color:inherit;text-decoration:none}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:18px 28px;background:transparent;position:sticky;top:0;backdrop-filter: blur(6px)}
+.logo{font-weight:700;font-size:18px}
+.nav-links a{margin-left:18px;color:#222}
+.hero{display:flex;align-items:center;justify-content:space-between;padding:60px 28px;background:linear-gradient(180deg,rgba(255,79,114,0.06),transparent)}
+.hero-inner{max-width:640px}
+h1{font-size:38px;margin:0 0 12px}
+.sub{margin:0 0 20px;color:var(--muted)}
+.cta a{display:inline-block;margin-right:12px;padding:12px 18px;border-radius:10px}
+.primary{background:var(--pink);color:white}
+.ghost{border:1px solid rgba(0,0,0,0.08);background:white}
+.section{max-width:1000px;margin:40px auto;padding:0 20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:18px}
+.card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(14,14,14,0.06);transform:translateY(0);transition:transform .28s ease}
+.card:hover{transform:translateY(-6px)}
+.form-card{max-width:640px;padding:18px;background:var(--card);border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,0.06);margin-top:12px}
+input,textarea,select{width:100%;padding:10px;border-radius:8px;border:1px solid #e6e6e6;margin-top:8px}
+.form-actions{display:flex;align-items:center;gap:12px;margin-top:12px}
+.muted{color:var(--muted);font-size:13px}
+.footer{padding:28px;text-align:center;color:var(--muted);font-size:14px}
+
+/* simple appear animation */
+.appear{opacity:0;transform:translateY(8px);animation:fadeInUp .6s forwards}
+.delay-1{animation-delay:.15s}
+.delay-2{animation-delay:.35s}
+@keyframes fadeInUp{to{opacity:1;transform:none}}
+
+/* floating hearts (pure CSS) */
+.hero-anim{position:relative;width:220px;height:160px}
+.floating-heart{width:60px;height:60px;background:var(--pink);border-radius:50%;position:absolute;right:30px;top:10px;opacity:.95;filter:blur(.2px);animation:floaty 4s ease-in-out infinite}
+.floating-heart::before,.floating-heart::after{content:'';position:absolute;width:60px;height:60px;border-radius:50%;background:var(--pink)}
+.floating-heart::before{left:18px;top:-18px}
+.floating-heart::after{left:-18px;top:-18px}
+.floating-heart.two{right:0;top:40px;transform:scale(.8);animation-duration:5.2s}
+@keyframes floaty{0%{transform:translateY(0) rotate(0)}50%{transform:translateY(-18px) rotate(6deg)}100%{transform:translateY(0) rotate(0)}}
+
+/* responsive */
+@media (max-width:760px){
+  .hero{flex-direction:column;align-items:flex-start}
+  .hero-anim{display:none}
+  h1{font-size:28px}
+}
