@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>KeepClose — Love Made Effortless</title>
+  <meta name="description" content="KeepClose helps busy people nurture important relationships with reminders, gift ideas, and thoughtful moments." />
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <nav class="nav">
+    <a class="logo" href="/">KeepClose</a>
+    <div class="nav-links">
+      <a href="/about.html">About</a>
+      <a href="/features.html">Features</a>
+      <a href="/contact.html" class="btn">Get Started</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-inner">
+      <h1 class="appear">KeepClose — Love Made Effortless</h1>
+      <p class="sub appear delay-1">Small gestures, big impact. AI-powered care for the people you love.</p>
+      <div class="cta appear delay-2">
+        <a href="/contact.html" class="primary">Start Free</a>
+        <a href="/features.html" class="ghost">See How It Works</a>
+      </div>
+    </div>
+    <div class="hero-anim" aria-hidden="true">
+      <div class="floating-heart"></div>
+      <div class="floating-heart two"></div>
+    </div>
+  </header>
+
+  <main class="section">
+    <h2>How It Works</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>1. Tell us about them</h3>
+        <p>Add your people — partners, family, friends.</p>
+      </div>
+      <div class="card">
+        <h3>2. We learn</h3>
+        <p>AI suggests thoughtful gifts & moments.</p>
+      </div>
+      <div class="card">
+        <h3>3. We plan & deliver</h3>
+        <p>Automated reminders, gift ideas, and delivery options.</p>
+      </div>
+    </div>
+  </main>
+
+  <section class="section alt">
+    <h2>Give us a few details</h2>
+    <p>Share who you want to keep close — we'll suggest the first surprise.</p>
+
+    <form id="leadForm" class="form-card">
+      <label>Your Name
+        <input name="name" id="name" required />
+      </label>
+      <label>Your Email
+        <input type="email" name="email" id="email" required />
+      </label>
+      <label>Who do you want to keep close?
+        <textarea name="about" id="about" rows="3" required></textarea>
+      </label>
+      <label>Budget (optional)
+        <select name="budget" id="budget">
+          <option value="">Select</option>
+          <option>$0–$25</option>
+          <option>$25–$75</option>
+          <option>$75–$200</option>
+          <option>$200+</option>
+        </select>
+      </label>
+
+      <div class="form-actions">
+        <button type="submit" class="primary">Send</button>
+        <div id="formStatus" class="muted" aria-live="polite"></div>
+      </div>
+    </form>
+    <p class="muted note">This form posts to a Google Sheets endpoint — follow README to create your sheet & script.</p>
+  </section>
+
+  <footer class="footer">
+    <p>© 2025 KeepClose — Built with ❤️</p>
+    <p class="muted">Deploy: GitHub Pages · Netlify · Vercel</p>
+  </footer>
+
+<script src="assets/main.js"></script>
+</body>
+</html>

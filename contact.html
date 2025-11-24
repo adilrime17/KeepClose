@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Get Started — KeepClose</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <nav class="nav">
+    <a class="logo" href="/">KeepClose</a>
+    <div class="nav-links">
+      <a href="/about.html">About</a>
+      <a href="/features.html">Features</a>
+      <a href="/contact.html" class="btn">Get Started</a>
+    </div>
+  </nav>
+
+  <main class="section">
+    <h1>Get Started</h1>
+    <p>Fill this form and we'll email a starter surprise idea.</p>
+
+    <form id="leadForm2" class="form-card">
+      <label>Your Name
+        <input name="name" id="name2" required />
+      </label>
+      <label>Your Email
+        <input type="email" name="email" id="email2" required />
+      </label>
+      <label>Who do you want to keep close?
+        <textarea name="about" id="about2" rows="3" required></textarea>
+      </label>
+      <label>Preferred contact
+        <input name="contactPref" id="contactPref" />
+      </label>
+      <div class="form-actions">
+        <button type="submit" class="primary">Send</button>
+        <div id="formStatus2" class="muted" aria-live="polite"></div>
+      </div>
+    </form>
+
+    <p class="muted note">Form posts to your Google Sheets endpoint — see README for setup steps.</p>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 KeepClose</p>
+  </footer>
+
+<script src="assets/main.js"></script>
+</body>
+</html>
